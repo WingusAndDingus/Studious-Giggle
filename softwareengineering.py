@@ -13,13 +13,13 @@ def main():
         elif user == 2:
             print(f"The encoded password is {en}, and the original password is {decoder(en)}.")
 
-def encoder(password):
+def encoder(password): #Fernando Hernandez Martin
     encoded = ""
     for digit in password:
         if int(digit) <= 6:
-            encoded += (int(digit) + 3)
+            encoded += str(int(digit) + 3)
         else:
-            encoded += ((int(digit) + 3) % 10)
+            encoded += str((int(digit) + 3) % 10)
     return encoded
 
 if __name__ == '__main__':
