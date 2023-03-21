@@ -13,6 +13,14 @@ def main():
         elif user == 2:
             print(f"The encoded password is {en}, and the original password is {decoder(en)}.")
 
+def decoder(encoded): # Pedro Leon ;)
+    password = ""
+    for digit in encoded:
+        # Shift the digit down by 3 numbers
+        shifted_digit = str((int(digit) - 3) % 10)
+        password += shifted_digit
+    return password
+
 def encoder(password): #Fernando Hernandez Martin
     encoded = ""
     for digit in password:
